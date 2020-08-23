@@ -112,7 +112,7 @@ description = "YouTube video downloader"
 name = "youtube-dl"
 optional = false
 python-versions = "*"
-version = "2020.2.16"
+version = "2020.7.28"
 
 [metadata]
 content-hash = "12d3a46e5bb8cd38dc8316dd5509a562744fa56f5da2d932d0f79b3f83fc8012"
@@ -208,6 +208,6 @@ tornado = [
     {file = "tornado-6.0.3.tar.gz", hash = "sha256:c845db36ba616912074c5b1ee897f8e0124df269468f25e4fe21fe72f6edd7a9"},
 ]
 youtube-dl = [
-    {file = "youtube_dl-2020.2.16-py2.py3-none-any.whl", hash = "sha256:3ba5a9258a33b537392f3dfd3f8868631c63a437d17524555922020ba19c4102"},
-    {file = "youtube_dl-2020.2.16.tar.gz", hash = "sha256:b98d240c928a1bd0412b270ccf0d776aae5448672ea374e0af45f6daa3984009"},
+    {file = "youtube_dl-2020.7.28-py2.py3-none-any.whl", hash = "sha256:c1bf9a20b0bc8cf6489930b96b9830156e2a7e865fc96ef628e97fa37aad8de9"},
+    {file = "youtube_dl-2020.7.28.tar.gz", hash = "sha256:4af90dac41dba8b2c8bdce3903177c4ecbc27d75e03a3f08070f9d9decbae829"},
 ]

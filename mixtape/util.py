@@ -5,6 +5,7 @@ import pkgutil
 from contextlib import contextmanager
 from pathlib import Path
 from datetime import datetime as dt
+from time import sleep
 
 import youtube_dl
 from mpd import MPDClient
@@ -130,11 +131,17 @@ def wait_for_database_update():
 
 
 def add_to_queue(filename):
+    LOG.debug('Adding %s to queue', filename)
     with mpdclient() as c:
         LOG.debug('Updating MPD database')
         r = c.update()
         LOG.debug('MPD database update result %s', r)
         LOG.debug('Adding song to queue')
-        song_id = c.addid(filename)
+        for i in range(10):
+            try:
+                song_id = c.addid(filename)
+                break
+            except mpd.base.CommandError as e:
+                sleep(5)
         LOG.debug('Song ID: %s', song_id)
         return int(c.status()['playlistlength'])
